@@ -1,34 +1,61 @@
-import React from 'react'
+import React from "react";
+import "./Contact.css";
 
-function Contact() {
-    return (
-        <div>
+function About() {
+  return (
+    <div className="container py-5">
+      <div className="row">
+        <div className="col-md-8 mx-auto">
+          <div className="card shadow p-4">
+            <h2 className="mb-4 text-center">Contact Us</h2>
             <form>
-                <div class="form-col">
-                    <div class="form-group col-md-6" style={{ textAlign: 'left' }}>
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
-                        <br />
-                        <label for="input">Inquiries or Feedback</label>
-                        <input type="text" class="form-control" id="input" placeholder="Inquiries/Feedback" />
-                    </div>
-
-                </div>
-
-                <br />
-                <div class="form-row" style={{ marginLeft: '20px' }}>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck" />
-                        <label class="form-check-label" for="gridCheck">
-                            Save my response
-                        </label>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+              <div className="mb-3">
+                <label htmlFor="name" className="form-label">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">
+                  Your Email
+                </label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="message" className="form-label">
+                  Message
+                </label>
+                <textarea
+                  className="form-control"
+                  id="message"
+                  rows="5"
+                  placeholder="Enter your message"
+                  required
+                ></textarea>
+              </div>
+              <div className="text-center">
+                <button type="submit" className="btn btn-primary">
+                  Submit
+                </button>
+              </div>
             </form>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default Contact
-
+export default About;

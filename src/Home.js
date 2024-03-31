@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-import { Container, Navbar, Nav, Button, Card, Row, Col } from 'react-bootstrap'
+import { Container, Nav, Button, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import './App.css'
 
 function Home() {
@@ -34,29 +35,29 @@ function Home() {
         </Carousel.Item>
       </Carousel>
 
-      {/* content 2 */}
+      {/* content 2 - categories */}
       <br />
       <h1 style={{ fontSize: '3rem', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase' }}>New Arrivals</h1>
-      <Nav variant="pills" defaultActiveKey="/home">
-        <br />
+      <br />
+      <Nav variant="pills" defaultActiveKey="/">
         <Nav.Item>
-          <Nav.Link href="/home">Men</Nav.Link>
+          <Nav.Link href="/products">Men</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-1">Women</Nav.Link>
+          <Nav.Link href="/products">Women</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-2">Kids</Nav.Link>
+          <Nav.Link href="#1">Kids</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-3">Sport</Nav.Link>
+          <Nav.Link href="#2">Sport</Nav.Link>
         </Nav.Item>
       </Nav>
 
       {/* content 3 */}
       <div className="hero">
         <Carousel>
-
+          {/* Men */}
           <Carousel.Item>
             <Row>
               <Col>
@@ -74,6 +75,7 @@ function Home() {
             </Row>
           </Carousel.Item>
 
+          {/* Women  */}
           <Carousel.Item>
             <Row>
               <Col>
@@ -96,14 +98,15 @@ function Home() {
 
       <br />
       <br />
-      {/* Content */}
+      {/* Content 4 - shop now */}
       <div style={{ position: 'relative' }}>
         <img src='pic5.jpg' style={{ width: '90%' }} />
         <Container fluid className="text-overlay">
-          {/* <h3 className="text-center" style={{  color: "orange", fontSize: '40px' }}>Online exclusive</h3> */}
-          {/* <p className="text-center" style={{ fontWeight: "bold", color: "White", fontSize: '20px' }}>Limited Edition 2024</p><br /> */}
           <br /><br />
-          <Button variant="primary">Shop Now</Button>
+
+          {/* to link to Products component */}
+          <Button variant="primary">
+            <Link to='/Products' style={{ textDecoration: 'none', color: 'inherit' }}></Link>Shop Now</Button>
         </Container>
       </div>
     </div >
