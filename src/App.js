@@ -54,7 +54,7 @@ function Header() {
 // Footer Component
 function Footer() {
   return (
-    <footer className="bg-dark py-2 text-center mt-4">
+    <footer className="footer bg-dark py-0 text-center fixed-bottom">
       <p style={{color:'white'}}><br />All rights reserved &copy; 2024 Laravel Shop</p>
     </footer>
   );
