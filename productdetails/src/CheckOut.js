@@ -4,7 +4,7 @@ import { useCart } from './CartContext';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
-const stripePromise = loadStripe('pk_test_51P0FkEP4NWJFetkFb5rz7W3ggV40tBBl6khjqc4TPDgpFeUIX5lsiy901Vmq11rNsCQ8ZvimEJgeldccHHymaSKD00EZYrqH96');
+const stripePromise = loadStripe('sk_test_51P0FkEP4NWJFetkFcymoI38THACqjwte2IOY3IbdlvpfFv0pYNghRPAyvWHG3viN2bBDrpwH5Yx1ylVFkDcRMTjo00Hz6aVbBf');
 
 const CheckoutForm = () => {
   const stripe = useStripe();
