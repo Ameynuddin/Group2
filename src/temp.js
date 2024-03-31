@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import { Container, Navbar, Nav, Button, Card, Row, Col } from 'react-bootstrap'
+import { CardImg, CardBody, CardTitle } from 'react-bootstrap'
 import './App.css'
 
 function Home() {
@@ -33,9 +34,15 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <div className="hero">
+        <Container>
+          <h1 className="display-4 text-center text-white">Welcome to Our Apparel Shop</h1>
+          <p className="lead text-center text-white">Explore our latest collection and find the perfect outfit for you.</p>
+
+        </Container>
+      </div>
 
       {/* content 2 */}
-      <br />
       <h1 style={{ fontSize: '3rem', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase' }}>New Arrivals</h1>
       <Nav variant="pills" defaultActiveKey="/home">
         <br />
@@ -53,50 +60,67 @@ function Home() {
         </Nav.Item>
       </Nav>
 
+
+      <Row className="mt-4">
+        <Col md={4}>
+          <CardComponent
+            imgSrc="bg.jpg" style={{ width: '200px' }}
+            title="Industrial"
+            description="A leader in the heavy equipment business, offering a comprehensive range of heavy equipment products and services across Asia Pacific."
+          />
+        </Col>
+        <Col md={4}>
+          <CardComponent
+            imgSrc="bg2.jpg" style={{ width: '200px' }}
+            title="Motors"
+
+          />
+        </Col>
+        <Col md={4}>
+          <CardComponent
+            imgSrc="bg3.jpg" style={{ width: '200px' }}
+            title="Technology"/>
+        </Col>
+      </Row>
       {/* content 3 */}
-      <div className="hero">
-        <Carousel>
+      <Container className="mt-5">
+        <Row>
+          <Col md={4}>
+            <Card>
+              <Card.Body>
+                <Card.Title>Men's Clothing</Card.Title>
+                <Card.Text>
+                  Explore our latest collection for men
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4}>
+            <Card>
+              <Card.Body>
+                <Card.Title>Women's Clothing</Card.Title>
+                <Card.Text>
+                  Check out our stylish collection for women
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4}>
+            <Card>
+              <Card.Body>
+                <Card.Title>Kids' Clothing</Card.Title>
+                <Card.Text>
+                  Cute and comfy outfits for your little ones
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
 
-          <Carousel.Item>
-            <Row>
-              <Col>
-                <img src='card1.jpg' style={{ width: '80%', margin: '50px' }} />
-                <p style={{ marginLeft: '90px' }}>Short-Sleeve Men T-Shirt<br />Regular price: $20.00 USD</p>
-              </Col>
-              <Col>
-                <img src='card2.jpg' style={{ width: '80%', margin: '50px' }} />
-                <p style={{ marginLeft: '90px' }}>Short-Sleeve Men T-Shirt<br />Regular price: $20.00 USD</p>
-              </Col>
-              <Col>
-                <img src='card3.jpg' style={{ width: '80%', margin: '50px' }} />
-                <p style={{ marginLeft: '50px' }}>Men Hoodie<br />Regular price: $29.00 USD</p>
-              </Col>
-            </Row>
-          </Carousel.Item>
-
-          <Carousel.Item>
-            <Row>
-              <Col>
-                <img src='card4.jpeg' style={{ width: '80%', margin: '50px' }} />
-                <p style={{ marginLeft: '50px' }}>Linen-blend trousers<br />Regular price: $29.00 USD</p>
-              </Col>
-              <Col>
-                <img src='card5.jpeg' style={{ width: '80%', margin: '50px' }} />
-                <p style={{ marginLeft: '50px' }}>Utility trousers<br />Regular price: $19.95 USD</p>
-              </Col>
-              <Col>
-                <img src='card6.jpg' style={{ width: '80%', margin: '50px' }} />
-                <p style={{ marginLeft: '50px' }}>Rhinestone-Embellished Jeans<br />Regular price: $29.00 USD</p>
-              </Col>
-            </Row>
-          </Carousel.Item>
-
-        </Carousel>
-      </div>
 
       <br />
-      <br />
-      {/* Content */}
+
       <div style={{ position: 'relative' }}>
         <img src='pic5.jpg' style={{ width: '90%' }} />
         <Container fluid className="text-overlay">
